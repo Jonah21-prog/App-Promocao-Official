@@ -19,7 +19,7 @@ export default function Login({ navigation }) {
     <View style={styles.container}>
       <Text h3>Entre aqui</Text>
       <Input
-        placeholder="E-mail"
+        placeholder="E-mail adsfasdfsadfasdf"
         leftIcon={{ type: "font-awesome", name: "envelope" }}
         onChangeText={(value) => setEmail(value)}
         keyboardType="email-address"
