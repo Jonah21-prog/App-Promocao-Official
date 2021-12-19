@@ -19,7 +19,7 @@ export default function Login({ navigation }) {
     <View style={styles.container}>
       <Text h3>Entre aqui</Text>
       <Input
-        placeholder="E-mail adsfasdfsadfasdf"
+        placeholder="E-mail"
         leftIcon={{ type: "font-awesome", name: "envelope" }}
         onChangeText={(value) => setEmail(value)}
         keyboardType="email-address"
@@ -30,12 +30,6 @@ export default function Login({ navigation }) {
         leftIcon={{ type: "font-awesome", name: "key" }}
         onChangeText={(value) => setPassword(value)}
         secureTextEntry={true}
-      />
-
-      <Button
-        icon={<Icon name="f2f6" size={15} color="white" />}
-        title="Entrar "
-        onPress={() => entrar()}
       />
     </View>
   );
