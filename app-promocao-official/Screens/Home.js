@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { StyleSheet, View } from "react-native";
-import { Button, Input, Text } from "react-native-elements";
-import Icon from "react-native-vector-icons/FontAwesome";
-import styles from "../Styles/MainStyles";
+import { View } from "react-native";
+import { Text } from "react-native-elements";
+import SearchBar from "../Components/SearchBar";
 
 export default function Home({ navigation }) {
   return (
     <View>
-      <Text h3>Home</Text>
+      <SearchBar h3>Home</SearchBar>
     </View>
   );
 }
