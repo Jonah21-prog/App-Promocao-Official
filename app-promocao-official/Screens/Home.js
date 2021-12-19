@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Text } from "react-native";
-import { View } from "react-native-web";
+import { StyleSheet, View } from "react-native";
+import { Button, Input, Text } from "react-native-elements";
+import Icon from "react-native-vector-icons/FontAwesome";
+import styles from "../Styles/MainStyles";
 
-export default function App() {
+export default function Home({ navigation }) {
   return (
     <View>
-      <Text>Entrou</Text>
+      <Text h3>Home</Text>
     </View>
   );
 }

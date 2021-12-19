@@ -9,10 +9,7 @@ export default function Login({ navigation }) {
   const [password, setPassword] = useState(null);
 
   const entrar = () => {
-    navigation.reset({
-      index: 0,
-      routes: [{ name: "Home" }],
-    });
+    navigation.push("Home");
   };
 
   return (
@@ -30,6 +27,12 @@ export default function Login({ navigation }) {
         leftIcon={{ type: "font-awesome", name: "key" }}
         onChangeText={(value) => setPassword(value)}
         secureTextEntry={true}
+      />
+
+      <Button
+        icon={<Icon name="f2f6" size={15} color="white" />}
+        title="Entrar "
+        onPress={() => entrar()}
       />
     </View>
   );
