@@ -13,7 +13,9 @@ import {
 import { NavigationContainer } from "@react-navigation/native";
 import Login from "./Screens/Login";
 import Home from "./Screens/Home";
+import TelaCadastro from "./Screens/TelaCadastro";
 import { createStackNavigator } from "@react-navigation/stack";
+
 
 const Stack = createStackNavigator();
 
@@ -22,6 +24,7 @@ function MyStack() {
     <Stack.Navigator initialRouteName="Login">
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="TelaCadastro" component={TelaCadastro} />
     </Stack.Navigator>
   );
 }
