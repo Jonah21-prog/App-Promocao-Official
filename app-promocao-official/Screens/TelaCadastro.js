@@ -56,15 +56,15 @@ export default function TelaCadastro({ navigation }) {
         return !error
     }
 
-    const salvar = () => {
+    /*const salvar = () => {
         if (validar()){
             console.log("salvou")
         }       
-    };
-
-    /*const salvar = () => {
-        navigation.push("Home");
     };*/
+
+    const salvar = () => {
+        navigation.push("Home");
+    }
 
 
     return (

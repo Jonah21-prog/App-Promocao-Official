@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 import { Button, Input, Text } from "react-native-elements";
 import Icon from "react-native-vector-icons/FontAwesome";
 import styles from "../Styles/MainStyles";
+
+
 
 export default function Login({ navigation }) {
     const [email, setEmail] = useState(null);
@@ -18,7 +20,16 @@ export default function Login({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text h3>Entre aqui</Text>
+            
+            
+            <Image
+                style={styles.image}
+                resizeMode="center"
+                source={require('../assets/User.png')}
+            />
+            
+            <Text h4>Faça seu login </Text>                   
+        
             <Input
                 placeholder="E-mail"
                 leftIcon={{ type: "font-awesome", name: "envelope" }}
@@ -29,7 +40,7 @@ export default function Login({ navigation }) {
 
             <Input
                 placeholder="Senha"
-                leftIcon={{ type: "font-awesome", name: "key" }}
+                leftIcon={{ type: "font-awesome", name: "key" }} 
                 onChangeText={(value) => setPassword(value)}
                 secureTextEntry={true}
                 placeholderTextColor = '#000000'

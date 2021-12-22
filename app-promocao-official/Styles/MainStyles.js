@@ -10,6 +10,12 @@ const styles = StyleSheet.create({
         borderWidth: 1,     
         borderStyle: "solid"
     },
+
+    image:{        
+        width: 150,
+        height: 150
+        
+    }
 });
 
 export default styles
