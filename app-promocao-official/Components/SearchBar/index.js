@@ -1,29 +1,36 @@
 import React from "react";
 import { View } from "react-native";
-import { Text } from "react-native-elements";
+import { Icon } from "react-native-elements";
 import { StyleSheet, TextInput } from "react-native";
 
 export default function SearchBar({ navigation }) {
   return (
     <View style={styles.container}>
-      <TextInput placeholder="Buscar" style={styles.searchBarcontainer} />
+      <Icon
+        name="cutlery"
+        size={24}
+        type="font-awesome"
+        style={{ marginLeft: 8 }}
+      />
+      <TextInput placeholder="Buscar" style={styles.searchBar} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    flexDirection: "column",
+    flexDirection: "row",
     justifyContent: "flex-start",
     alignItems: "center",
-    padding: 8,
-  },
-  searchBarcontainer: {
-    padding: 8,
-    height: 48,
     width: "90%",
     borderWidth: 2,
     borderRadius: 8,
+  },
+
+  searchBar: {
+    width: "100%",
+    padding: 8,
+    height: 48,
+    fontSize: 20,
   },
 });
