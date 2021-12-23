@@ -9,6 +9,7 @@ export default function Home({ navigation }) {
   const lanche = () => {
     navigation.push("ItemPromocao");
   };
+  
   return (
     <View style={specificStyle.specificContainer}>
       <View style={styles.top}>
