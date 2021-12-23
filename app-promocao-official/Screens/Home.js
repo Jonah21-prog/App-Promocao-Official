@@ -1,25 +1,88 @@
 import React, { useState } from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Text } from "react-native-elements";
 import SearchBar from "../Components/SearchBar";
 import styles from "../Styles/MainStyles";
 
 export default function Home({ navigation }) {
+
+  const lanche = () => {
+    navigation.push("ItemPromocao");
+  };
   return (
     <View style={specificStyle.specificContainer}>
-      <View style={specificStyle.header}>
-        <SearchBar />
+      <View style={styles.top}>
+        <View style={specificStyle.header}>
+          <SearchBar />
+
+          <View style={styles.border}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => alert("Clicado")}
+            >
+              <Image
+                source={require('../assets/IceCream.png')}
+
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => alert("Clicado")}
+            >
+              <Image
+                source={require('../assets/Cake.png')}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => alert("Clicado")}
+            >
+              <Image
+                source={require('../assets/Lunch.png')}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => alert("Clicado")}
+            >
+              <Image
+                source={require('../assets/Mercado.png')}
+              />
+            </TouchableOpacity>
+
+          </View>
+        </View>
+      </View>      
+      
+      <Text h4>Lanches</Text>
+      <View style={specificStyle.content}>
+        
+        <TouchableOpacity
+        style={styles.precoContainer}
+        >
+          <Image
+            style={styles.oferta}
+            source={
+              require('../assets/exemplolanche1.png')
+            }
+          >
+
+          </Image>
+          <Text style={styles.preco}>
+            {"22.99"}
+          </Text>
+          <Text style={styles.promocao}>
+            {"18.99"}
+          </Text>
+        </TouchableOpacity>
+
+        
       </View>
 
-      <View style={specificStyle.content}>
-        <Text h4>Home</Text>
-        <TouchableOpacity
-          style={specificStyle.button}
-          onPress={() => alert("Clicado")}
-        >
-          <Text>Botão</Text>
-        </TouchableOpacity>
-      </View>
+
     </View>
   );
 }
@@ -28,9 +91,10 @@ const specificStyle = StyleSheet.create({
   specificContainer: {
     flex: 1,
     backgroundColor: "#fff",
-    borderColor: "#000",
+    borderColor: "#ff0",
     borderWidth: 1,
     borderStyle: "solid",
+    padding: 10
   },
 
   header: {
@@ -41,9 +105,9 @@ const specificStyle = StyleSheet.create({
   },
 
   content: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    borderColor: "#f0f",
+    borderWidth: 4,
+    flexDirection: 'row'
   },
 
   button: {

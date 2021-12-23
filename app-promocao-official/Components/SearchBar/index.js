@@ -7,7 +7,7 @@ export default function SearchBar({ navigation }) {
   return (
     <View style={styles.container}>
       <Icon
-        name="cutlery"
+        name="search"
         size={24}
         type="font-awesome"
         style={{ marginLeft: 8 }}
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     width: "90%",
     borderWidth: 2,
     borderRadius: 8,
+    borderColor: '#0f0',
   },
 
   searchBar: {

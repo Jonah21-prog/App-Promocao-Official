@@ -14,7 +14,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import Login from "./Screens/Login";
 import Home from "./Screens/Home";
 import TelaCadastro from "./Screens/TelaCadastro";
+import ItemPromocao from "./Screens/ItemPromocao";
 import { createStackNavigator } from "@react-navigation/stack";
+
+
 
 
 const Stack = createStackNavigator();
@@ -25,6 +28,7 @@ function MyStack() {
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="TelaCadastro" component={TelaCadastro} />
+      <Stack.Screen name="ItemPromocao" component={ItemPromocao} />
     </Stack.Navigator>
   );
 }
