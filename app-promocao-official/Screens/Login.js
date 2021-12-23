@@ -14,36 +14,36 @@ export default function Login({ navigation }) {
         navigation.push("Home");
     };
 
-    const cadastro= () => {
+    const cadastro = () => {
         navigation.push("TelaCadastro");
     };
 
     return (
         <View style={styles.container}>
-            
-            
+
+
             <Image
                 style={styles.image}
                 resizeMode="center"
                 source={require('../assets/User.png')}
             />
-            
-            <Text h4>Faça seu login </Text>                   
-        
+
+            <Text h4>Faça seu login </Text>
+
             <Input
                 placeholder="E-mail"
                 leftIcon={{ type: "font-awesome", name: "envelope" }}
                 onChangeText={(value) => setEmail(value)}
                 keyboardType="email-address"
-                placeholderTextColor = '#000000'
+                placeholderTextColor='#000000'
             />
 
             <Input
                 placeholder="Senha"
-                leftIcon={{ type: "font-awesome", name: "key" }} 
+                leftIcon={{ type: "font-awesome", name: "key" }}
                 onChangeText={(value) => setPassword(value)}
                 secureTextEntry={true}
-                placeholderTextColor = '#000000'
+                placeholderTextColor='#000000'
             />
 
             <Button
