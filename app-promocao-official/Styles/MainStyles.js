@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { ScreenStackHeaderBackButtonImage } from 'react-native-screens';
 
 const styles = StyleSheet.create({
     container: {
@@ -30,6 +31,14 @@ const styles = StyleSheet.create({
     textTitlle: {
         textAlign: 'center',
         padding: 5,
+    },
+
+    button:{
+        alignItems: "center",
+        backgroundColor:'#fff',
+        padding:10,
+        width:300,
+        marginTop:16,
     }
 });
 
