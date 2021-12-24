@@ -19,10 +19,10 @@ export default function Promocao(props) {
             <View style={{ flexDirection: 'row', heigth: '100%' }}>
                 <View>
                     <Text style={styles.promocao}>
-                        {"18.99"}
+                        {"22.99"}
                     </Text>
                     <Text style={styles.preco}>
-                        {"22.99"}
+                        {"18.99"}
                     </Text>
                 </View>
                 <TouchableOpacity>                    

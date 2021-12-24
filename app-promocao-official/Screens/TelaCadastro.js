@@ -34,9 +34,7 @@ export default function TelaCadastro({ navigation }) {
           iconName="user-circle"
           height={48}
           width={280}
-          onPress={() => {
-            console.log("Testando CustomButton");
-          }}
+          onPress={() => cadastroCliente()}          
         />
 
         <CustomButton
@@ -44,9 +42,8 @@ export default function TelaCadastro({ navigation }) {
           iconName="shopping-bag"
           height={48}
           width={250}
-          onPress={() => {
-            console.log("Testando CustomButton");
-          }}
+          onPress={() => cadastroLoja()}
+          
         />
       </View>
     </View>

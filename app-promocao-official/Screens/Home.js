@@ -4,13 +4,14 @@ import { Text } from "react-native-elements";
 import SearchBar from '../Components/SearchBar';
 import Promocoes from '../Components/Promocoes';
 import styles from '../Styles/MainStyles';
+import Sobremesas from "../Components/Sobremesas";
 
 export default function Home({ navigation }) {
 
   const lanche = () => {
     navigation.push("ItemPromocao");
   };
-  
+
   return (
     <View style={specificStyle.specificContainer}>
       <View style={styles.top}>
@@ -57,9 +58,18 @@ export default function Home({ navigation }) {
 
           </View>
         </View>
-      </View>      
-    
-      <Promocoes/>
+      </View>
+
+      <View>
+        <Promocoes />
+        <Sobremesas />
+        <Promocoes />
+        <Promocoes />
+      </View>
+
+
+
+
 
     </View>
   );

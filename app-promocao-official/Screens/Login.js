@@ -55,9 +55,7 @@ export default function Login({ navigation }) {
           iconName="user"
           height={48}
           width={96}
-          onPress={() => {
-            console.log("Testando CustomButton");
-          }}
+          onPress={() => entrar()}          
         />
 
         <CustomButton
@@ -65,9 +63,7 @@ export default function Login({ navigation }) {
           iconName="home"
           height={48}
           width={150}
-          onPress={() => {
-            console.log("Testando CustomButton");
-          }}
+          onPress={() => cadastro()}           
         />
       </View>
     </View>
