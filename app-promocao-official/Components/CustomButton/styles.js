@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const styles = (width, height, borderRadius) =>
+const styles = (width, height, borderRadius, padding) =>
   StyleSheet.create({
     buttonStyle: {
       width: width ? width : 108,

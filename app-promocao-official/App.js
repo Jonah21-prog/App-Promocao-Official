@@ -13,7 +13,7 @@ const Stack = createStackNavigator();
 function MyStack() {
   return (
     <Stack.Navigator
-      initialRouteName="TelaCadastro"
+      initialRouteName="Login"
       screenOptions={{
         headerShown: false,
       }}

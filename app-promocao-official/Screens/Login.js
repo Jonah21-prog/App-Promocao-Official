@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Image, StyleSheet, View } from "react-native";
+import { Image, View } from "react-native";
 import { Button, Input, Text } from "react-native-elements";
+import CustomButton from "../Components/CustomButton";
 import styles from "../Styles/MainStyles";
 
 export default function Login({ navigation }) {
@@ -49,37 +50,26 @@ export default function Login({ navigation }) {
           justifyContent: "space-between",
         }}
       >
-        <Button
+        <CustomButton
           title="Entrar"
-          icon={{
-            name: "user",
-            type: "font-awesome",
-            size: 20,
-            color: "white",
+          iconName="user"
+          height={48}
+          width={96}
+          onPress={() => {
+            console.log("Testando CustomButton");
           }}
-          iconContainerStyle={{ marginRight: 8 }}
-          onPress={() => entrar()}
         />
 
-        <Button
+        <CustomButton
           title="Fazer Cadastro"
-          icon={{
-            name: "home",
-            type: "font-awesome",
-            size: 20,
-            color: "white",
+          iconName="home"
+          height={48}
+          width={150}
+          onPress={() => {
+            console.log("Testando CustomButton");
           }}
-          iconContainerStyle={{ marginRight: 8 }}
         />
       </View>
     </View>
   );
 }
-
-const specificStyle = StyleSheet.create({
-  circle: {
-    width: 44,
-    height: 44,
-    borderRadius: 44 / 2,
-  },
-});
