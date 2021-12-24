@@ -27,10 +27,9 @@ export default function Promocao(props) {
                 </View>
                 <TouchableOpacity>                    
                     <Image
-                        source={require('../../assets/userVendedor.png')}
-                        style={{ heigth: 20, width: 20 }}
-                    />
-                    <Text>Vendedor</Text>
+                        source={require('../../assets/UserLoja.png')}
+                        
+                    />                    
                 </TouchableOpacity>
             </View>
 
