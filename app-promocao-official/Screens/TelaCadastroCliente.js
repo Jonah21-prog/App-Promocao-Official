@@ -5,7 +5,7 @@ import CheckBoxIcon from "react-native-elements/dist/checkbox/CheckBoxIcon";
 import Icon from "react-native-vector-icons/FontAwesome";
 import styles from "../Styles/MainStyles";
 
-export default function TelaCadastro({ navigation }) {
+export default function TelaCadastroCliente({ navigation }) {
     const [email, setEmail] = useState(null);
     const [nome, setNome] = useState(null);
     const [cpf, setCpf] = useState(null);
@@ -88,15 +88,7 @@ export default function TelaCadastro({ navigation }) {
                 placeholderTextColor='#a6a6a6'
                 returnKeyType="Done"
                 errorMessage={errorCpf}
-            />
-
-            <Input
-               
-                keyboardType="number-pad"
-                placeholderTextColor='#a6a6a6'
-                returnKeyType="Done"
-                errorMessage={errorCnpj}
-            />
+            />            
 
             <Input
                 placeholder="Endereco"

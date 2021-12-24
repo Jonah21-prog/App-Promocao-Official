@@ -46,9 +46,10 @@ export default function Login({ navigation }) {
                 placeholderTextColor='#000000'
             />
 
-            <Button
+            <Button 
+                style={specificStyle.circle}
                 icon={<Icon name="user" size={15} color="white" />}
-                title="Entrar "
+                title="Entrar"
                 onPress={() => entrar()}
             />
 
@@ -61,3 +62,10 @@ export default function Login({ navigation }) {
         </View>
     );
 }
+const specificStyle = StyleSheet.create({
+    circle:{
+        width:44,
+        height:44,
+        borderRadius: 44/2
+    }
+})

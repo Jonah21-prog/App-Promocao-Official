@@ -4,7 +4,7 @@ import { ScreenStackHeaderBackButtonImage } from 'react-native-screens';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#ff8c00',
+        backgroundColor: '#ff6600',
         justifyContent: 'center',
         alignItems: 'center',
         borderColor: '#000',
