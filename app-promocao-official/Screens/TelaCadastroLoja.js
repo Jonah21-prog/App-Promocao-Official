@@ -8,14 +8,12 @@ import styles from "../Styles/MainStyles";
 export default function TelaCadastro({ navigation }) {
     const [email, setEmail] = useState(null);
     const [nome, setNome] = useState(null);
-    const [cpf, setCpf] = useState(null);
     const [cnpj, setCnpj] = useState(null);
     const [endereco, setEndereco] = useState(null);
     const [contato, setContato] = useState(null);
     const [isSelected, setSelected] = useState(false);
     const [errorEmail, setErrorEmail] = useState(null);
     const [errorNome, setErrorNome] = useState(null);
-    const [errorCpf, setErrorCpf] = useState(null);
     const [errorCnpj, setErrorCnpj] = useState(null);
     const [errorEndereco, setErrorEndereco] = useState(null);
     const [errorContato, setErrorContato] = useState(null);
@@ -24,7 +22,6 @@ export default function TelaCadastro({ navigation }) {
         let error = false
         setErrorEmail(null)
         setErrorNome(null)
-        setErrorCpf(null)
         setErrorCnpj(null)
         setErrorEndereco(null)
         setErrorContato(null)
@@ -35,10 +32,6 @@ export default function TelaCadastro({ navigation }) {
         }
         if (validar()) {
             setErrorNome ("Preencha o seu nome corretamente")    
-            error = true        
-        }
-        if (validar()) {
-            setErrorCpf ("Preencha o seu CPF corretamente")    
             error = true        
         }
         if (validar()) {
@@ -56,16 +49,9 @@ export default function TelaCadastro({ navigation }) {
         return !error
     }
 
-    /*const salvar = () => {
-        if (validar()){
-            console.log("salvou")
-        }       
-    };*/
-
     const salvar = () => {
         navigation.push("Home");
     }
-
 
     return (
         <View style={styles.container}>
@@ -93,17 +79,24 @@ export default function TelaCadastro({ navigation }) {
             />
 
             <Input
-                placeholder="CPF"
+                placeholder="CNPJ"
                 onChangeText={(value) => {
-                    setCpf(value)
-                    setErrorCpf(null)
+                    setCnpj(value)
+                    setErrorCnpj(null)
                 }}
                 keyboardType="number-pad"
                 placeholderTextColor='#a6a6a6'
                 returnKeyType="Done"
-                errorMessage={errorCpf}
+                errorMessage={errorCnpj}
             />
 
+            <Input
+               
+                keyboardType="number-pad"
+                placeholderTextColor='#a6a6a6'
+                returnKeyType="Done"
+                errorMessage={errorCnpj}
+            />
 
             <Input
                 placeholder="Endereco"
@@ -148,4 +141,7 @@ export default function TelaCadastro({ navigation }) {
 
         </View>
     );
+
+
 }
+
