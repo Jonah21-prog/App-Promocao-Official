@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Text } from "react-native-elements";
-import SearchBar from "../Components/SearchBar";
-import styles from "../Styles/MainStyles";
+import SearchBar from '../Components/SearchBar';
+import Promocoes from '../Components/Promocoes';
+import styles from '../Styles/MainStyles';
 
 export default function Home({ navigation }) {
 
@@ -57,32 +58,8 @@ export default function Home({ navigation }) {
           </View>
         </View>
       </View>      
-      
-      <Text h4>Lanches</Text>
-      <View style={specificStyle.content}>
-        
-        <TouchableOpacity
-        style={styles.precoContainer}
-        >
-          <Image
-            style={styles.oferta}
-            source={
-              require('../assets/exemplolanche1.png')
-            }
-          >
-
-          </Image>
-          <Text style={styles.preco}>
-            {"22.99"}
-          </Text>
-          <Text style={styles.promocao}>
-            {"18.99"}
-          </Text>
-        </TouchableOpacity>
-
-        
-      </View>
-
+    
+      <Promocoes/>
 
     </View>
   );

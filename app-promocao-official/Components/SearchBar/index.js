@@ -12,7 +12,7 @@ export default function SearchBar({ navigation }) {
         type="font-awesome"
         style={{ marginLeft: 8 }}
       />
-      <TextInput placeholder="Buscar" style={styles.searchBar} />
+      <TextInput placeholder="Buscar?" style={styles.searchBar} />
     </View>
   );
 }
