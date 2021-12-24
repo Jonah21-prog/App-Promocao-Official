@@ -59,17 +59,11 @@ export default function Home({ navigation }) {
           </View>
         </View>
       </View>
-
+      
       <View>
         <Promocoes />
         <Sobremesas />
-        <Promocoes />
-        <Promocoes />
       </View>
-
-
-
-
 
     </View>
   );
