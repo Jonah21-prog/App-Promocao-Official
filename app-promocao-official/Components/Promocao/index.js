@@ -2,7 +2,12 @@ import React from "react";
 import styles from "../../Styles/MainStyles";
 import { TouchableOpacity, Image, Text, View } from "react-native";
 
-export default function Promocao(props) {
+export default function Promocao(props, {navigation}) {
+
+  const perfil = () => {
+    navigation.push("PerfilLoja");
+  };
+
   return (
     <TouchableOpacity
       style={styles.precoContainer}
@@ -30,7 +35,9 @@ export default function Promocao(props) {
           }}
         >
           <Text style={styles.preco}>{"18.99"}</Text>
-          <TouchableOpacity onPress={() => alert("Clicado ícone")}>
+          <TouchableOpacity 
+          onPress={() => perfil()} 
+          >
             <Image source={require("../../assets/UserLoja.png")} />
           </TouchableOpacity>
         </View>

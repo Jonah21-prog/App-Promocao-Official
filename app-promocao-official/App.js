@@ -7,6 +7,7 @@ import TelaCadastro from "./Screens/TelaCadastro";
 import ItemPromocao from "./Screens/ItemPromocao";
 import TelaCadastroCliente from "./Screens/TelaCadastroCliente";
 import TelaCadastroLoja from "./Screens/TelaCadastroLoja";
+import PerfilLoja from "./Screens/PerfilLoja";
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,7 @@ function MyStack() {
       <Stack.Screen name="ItemPromocao" component={ItemPromocao} />
       <Stack.Screen name="TelaCadastroCliente" component={TelaCadastroCliente} />
       <Stack.Screen name="TelaCadastroLoja" component={TelaCadastroLoja} />
+      <Stack.Screen name="PerfilLoja" component={PerfilLoja} />
     </Stack.Navigator>
   );
 }
