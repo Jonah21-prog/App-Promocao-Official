@@ -8,6 +8,7 @@ export default function Promocao(props) {
     return (
         <TouchableOpacity
             style={styles.precoContainer}
+            onPress={() => alert("Clicado")}
         >
             <Image
                 style={styles.oferta}
@@ -25,10 +26,11 @@ export default function Promocao(props) {
                         {"18.99"}
                     </Text>
                 </View>
-                <TouchableOpacity>                    
+                <TouchableOpacity 
+                onPress={() => alert("Clicado ícone")}
+                >                    
                     <Image
-                        source={require('../../assets/UserLoja.png')}
-                        
+                        source={require('../../assets/UserLoja.png')}                        
                     />                    
                 </TouchableOpacity>
             </View>

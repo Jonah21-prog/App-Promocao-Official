@@ -28,6 +28,7 @@ export default function Login({ navigation }) {
       <View style={{ width: "80%" }}>
         <Input
           placeholder="E-mail"
+          leftIcon={{ type: "font-awesome", name: "envelope" }}
           onChangeText={(value) => setEmail(value)}
           keyboardType="email-address"
           placeholderTextColor="#000000"
