@@ -6,7 +6,6 @@ import {
   View,
   ScrollView,
 } from "react-native";
-import { Text } from "react-native-elements";
 import SearchBar from "../Components/SearchBar";
 import Promocoes from "../Components/Promocoes";
 import styles from "../Styles/MainStyles";
@@ -54,11 +53,11 @@ export default function Home({ navigation }) {
       </View>
       <ScrollView>
         <View>
-          <Promocoes />
-          <Sobremesas />
-          <Promocoes />
-          <Sobremesas />
-          <Promocoes />
+          <Promocoes title="Lanches" />
+          <Promocoes title="Sobremesas" />
+          <Promocoes title="Lanches" />
+          <Promocoes title="Sobremesas" />
+          <Promocoes title="Lanches" />
         </View>
       </ScrollView>
     </View>
@@ -68,16 +67,15 @@ export default function Home({ navigation }) {
 const specificStyle = StyleSheet.create({
   specificContainer: {
     flex: 1,
-    borderWidth: 1,
-    borderStyle: "solid",
     paddingTop: 32,
+    backgroundColor: "white",
   },
 
   header: {
     width: "100%",
     alignItems: "center",
     justifyContent: "space-between",
-    height: "24%",
+    height: "20%",
     paddingVertical: 8,
   },
 

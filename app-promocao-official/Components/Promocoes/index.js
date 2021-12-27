@@ -3,11 +3,11 @@ import { View, Text, ScrollView } from "react-native";
 
 import Promocao from "../Promocao";
 
-export default function Promocoes() {
+export default function Promocoes(props) {
   return (
-    <View style={{ backgroundColor: "#ff0" }}>
-      <View>
-        <Text style={{ fontSize: 25, paddingLeft: 7.5 }}>Lanches</Text>
+    <View>
+      <View style={{ marginVertical: 8 }}>
+        <Text style={{ fontSize: 25, paddingLeft: 16 }}>{props.title}</Text>
         <ScrollView
           overScrollMode="never"
           horizontal
