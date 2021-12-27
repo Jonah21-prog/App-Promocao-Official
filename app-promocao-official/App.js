@@ -22,10 +22,7 @@ function MyStack() {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="TelaCadastro" component={TelaCadastro} />
       <Stack.Screen name="ItemPromocao" component={ItemPromocao} />
-      <Stack.Screen
-        name="TelaCadastroCliente"
-        component={TelaCadastroCliente}
-      />
+      <Stack.Screen name="TelaCadastroCliente" component={TelaCadastroCliente} />
       <Stack.Screen name="TelaCadastroLoja" component={TelaCadastroLoja} />
     </Stack.Navigator>
   );

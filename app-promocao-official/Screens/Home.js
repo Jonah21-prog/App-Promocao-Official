@@ -1,5 +1,11 @@
 import React from "react";
-import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+  ScrollView,
+} from "react-native";
 import { Text } from "react-native-elements";
 import SearchBar from "../Components/SearchBar";
 import Promocoes from "../Components/Promocoes";
@@ -46,11 +52,15 @@ export default function Home({ navigation }) {
           </TouchableOpacity>
         </View>
       </View>
-
-      <View>
-        <Promocoes />
-        <Sobremesas />
-      </View>
+      <ScrollView>
+        <View>
+          <Promocoes />
+          <Sobremesas />
+          <Promocoes />
+          <Sobremesas />
+          <Promocoes />
+        </View>
+      </ScrollView>
     </View>
   );
 }
