@@ -9,7 +9,6 @@ import {
 import SearchBar from "../Components/SearchBar";
 import Promocoes from "../Components/Promocoes";
 import styles from "../Styles/MainStyles";
-import Sobremesas from "../Components/Sobremesas";
 
 export default function Home({ navigation }) {
   const lanche = () => {

@@ -2,8 +2,9 @@ import React from "react";
 import styles from "../../Styles/MainStyles";
 import { TouchableOpacity, Image, Text, View } from "react-native";
 
-export default function Promocao(props, {navigation}) {
 
+export default function Promocao (props) {
+  const navigation = useNavigation();
   const perfil = () => {
     navigation.push("PerfilLoja");
   };
@@ -36,7 +37,7 @@ export default function Promocao(props, {navigation}) {
         >
           <Text style={styles.preco}>{"18.99"}</Text>
           <TouchableOpacity 
-          onPress={() => perfil()} 
+          onPress={() => navigation.navigate('PerfilLoja')} 
           >
             <Image source={require("../../assets/UserLoja.png")} />
           </TouchableOpacity>
