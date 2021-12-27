@@ -1,70 +1,56 @@
 import React from "react";
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Text } from "react-native-elements";
-import SearchBar from '../Components/SearchBar';
-import Promocoes from '../Components/Promocoes';
-import styles from '../Styles/MainStyles';
+import SearchBar from "../Components/SearchBar";
+import Promocoes from "../Components/Promocoes";
+import styles from "../Styles/MainStyles";
 import Sobremesas from "../Components/Sobremesas";
 
 export default function Home({ navigation }) {
-
   const lanche = () => {
     navigation.push("ItemPromocao");
   };
 
   return (
     <View style={specificStyle.specificContainer}>
-      <View style={styles.top}>
-        <View style={specificStyle.header}>
-          <SearchBar />
+      <View style={specificStyle.header}>
+        <SearchBar />
 
-          <View style={styles.border}>
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => alert("Clicado")}
-            >
-              <Image
-                source={require('../assets/IceCream.png')}
+        <View style={styles.border}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => alert("Clicado")}
+          >
+            <Image source={require("../assets/IceCream.png")} />
+          </TouchableOpacity>
 
-              />
-            </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => alert("Clicado")}
+          >
+            <Image source={require("../assets/Cake.png")} />
+          </TouchableOpacity>
 
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => alert("Clicado")}
-            >
-              <Image
-                source={require('../assets/Cake.png')}
-              />
-            </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => alert("Clicado")}
+          >
+            <Image source={require("../assets/Lunch.png")} />
+          </TouchableOpacity>
 
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => alert("Clicado")}
-            >
-              <Image
-                source={require('../assets/Lunch.png')}
-              />
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => alert("Clicado")}
-            >
-              <Image
-                source={require('../assets/Mercado.png')}
-              />
-            </TouchableOpacity>
-
-          </View>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => alert("Clicado")}
+          >
+            <Image source={require("../assets/Mercado.png")} />
+          </TouchableOpacity>
         </View>
       </View>
-      
+
       <View>
         <Promocoes />
         <Sobremesas />
       </View>
-
     </View>
   );
 }
@@ -72,24 +58,23 @@ export default function Home({ navigation }) {
 const specificStyle = StyleSheet.create({
   specificContainer: {
     flex: 1,
-    backgroundColor: "#fff",
-    borderColor: "#ff0",
     borderWidth: 1,
     borderStyle: "solid",
-    padding: 10
+    paddingTop: 32,
   },
 
   header: {
     width: "100%",
-    marginTop: 8,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-between",
+    height: "24%",
+    paddingVertical: 8,
   },
 
   content: {
     borderColor: "#f0f",
     borderWidth: 4,
-    flexDirection: 'row'
+    flexDirection: "row",
   },
 
   button: {
