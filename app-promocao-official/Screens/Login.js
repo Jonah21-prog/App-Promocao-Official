@@ -8,7 +8,23 @@ export default function Login({ navigation }) {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
 
+  state = {
+    email,
+    password
+}
+
+onRequest = async()=>{
+    try{
+        const res = await axios.post('http://localhost:8080/login',{...this.state});
+        return res.data;
+    } catch(error){
+        console.log('erro: ', error);
+    }
+    
+};
+
   const entrar = () => {
+    onPress={...this.onRequest}
     navigation.push("Home");
   };
 

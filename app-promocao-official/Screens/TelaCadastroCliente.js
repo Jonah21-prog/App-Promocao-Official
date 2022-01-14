@@ -18,6 +18,30 @@ export default function TelaCadastroCliente({ navigation }) {
     const [errorEndereco, setErrorEndereco] = useState(null);
     const [errorContato, setErrorContato] = useState(null);
 
+    state = {
+        email,
+        nome,
+        cpf,
+        endereco,
+        contato,
+    }
+
+    onRequest = async()=>{
+        try{
+            const res = await axios.post('http://localhost:8080/clientes',{...this.state});
+            return res.data;
+        } catch(error){
+            console.log('erro: ', error);
+        }
+        
+    };
+
+    salvar = () => {
+        onPress={...this.onRequest}
+        navigation.push("Home");
+    }
+
+
     const validar = () => {
         let error = false
         setErrorEmail(null)
@@ -49,9 +73,7 @@ export default function TelaCadastroCliente({ navigation }) {
         return !error
     }
 
-    const salvar = () => {
-        navigation.push("Home");
-    }
+   
 
     return (
         <View style={styles.container}>

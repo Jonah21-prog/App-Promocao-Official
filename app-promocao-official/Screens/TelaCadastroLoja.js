@@ -18,6 +18,29 @@ export default function TelaCadastroLoja({ navigation }) {
     const [errorEndereco, setErrorEndereco] = useState(null);
     const [errorContato, setErrorContato] = useState(null);
 
+    state = {
+        email,
+        nome,
+        cnpj,
+        endereco,
+        contato,
+    }
+
+    onRequest = async()=>{
+        try{
+            const res = await axios.post('http://localhost:8080/vendedores',{...this.state});
+            return res.data;
+        } catch(error){
+            console.log('erro: ', error);
+        }
+        
+    };
+
+    salvar = () => {
+        onPress={...this.onRequest}
+        navigation.push("Home");
+    }
+
     const validar = () => {
         let error = false
         setErrorEmail(null)
